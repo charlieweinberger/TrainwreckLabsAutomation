@@ -1,6 +1,6 @@
 # Trainwreck Labs Automation
 
-Automated javascript solvers for Trainwreck Labs' [Globle](https://globle-game.com/) and [Globle: Capitals](https://globle-capitals.com/). Paste the code below into the DevTools console on your browser while either game, and watch it automatically guess every possible country/capital in alphabetical order. To speed up or slow down the program, modify the `delay` variable (in milliseconds). Works in practice games too!
+Automated javascript solvers for Trainwreck Labs' [Globle](https://globle-game.com/) and [Globle: Capitals](https://globle-capitals.com/). Copy the code below and paste it into the DevTools console on your browser while playing either game, and watch it automatically guess every possible country/capital in alphabetical order. To speed up or slow down the program, modify the `delay` variable (in milliseconds). Works in practice games too!
 
 Inspired by [github.com/roman015/InfiniteCraftAutomation](https://github.com/roman015/InfiniteCraftAutomation).
 
