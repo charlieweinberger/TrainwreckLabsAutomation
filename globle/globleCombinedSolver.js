@@ -210,7 +210,7 @@ const answerTextClassName = "text-center font-medium";
 
 let index = 0;
 
-let type = "country"; // CHANGE THIS: either "country" or "capital"
+let type = "country";
 let delay = 500; // CHANGE THIS: I recommended 100 or 500 milliseconds
 
 let interval = setInterval(() => {
