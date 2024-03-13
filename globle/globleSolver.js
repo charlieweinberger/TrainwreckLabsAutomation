@@ -1,3 +1,5 @@
+// An automated javascript console solver for Globle.
+
 const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
 "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
 "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina",
@@ -38,6 +40,9 @@ let delay = 500; // CHANGE THIS
 
 let interval = setInterval(() => {
 
+    console.log(`\nindex: ${index}`);
+    console.log(`country: ${countries[index]}`);
+
     // guess country
     document.getElementsByClassName(formInputClassName)[0].value = countries[index];
     document.getElementsByClassName(formSubmitClassName)[0].click();
@@ -48,5 +53,7 @@ let interval = setInterval(() => {
     if (answerText.slice(0, 23) == "The Mystery Country is " || index > countries.length) {
         clearInterval(interval);
     }
+
+    console.log(`index: ${index}`);
 
 }, delay);

@@ -1,4 +1,6 @@
-const data = [
+// An automated javascript console solver for both Globle and Globle: Capitals.
+
+const countryData = [
     {"country": "Afghanistan", "capital": "Kabul"},
     {"country": "Albania", "capital": "Tirana"},
     {"country": "Algeria", "capital": "Algiers"},
@@ -213,14 +215,17 @@ let delay = 500; // CHANGE THIS: I recommended 100 or 500 milliseconds
 
 let interval = setInterval(() => {
 
+    console.log(`\nindex: ${index}`);
+    console.log(`data: ${countryData[index][type]}`);
+
     // guess option
-    document.getElementsByClassName(formInputClassName)[0].value = data[index][type];
+    document.getElementsByClassName(formInputClassName)[0].value = countryData[index][type];
     document.getElementsByClassName(formSubmitClassName)[0].click();
     index++;
 
     // check if answer is found or all options have been guessed
     answerText = document.getElementsByClassName(answerTextClassName)[0].innerHTML;
-    if (answerText.slice(0, 12) == "The Mystery " || index > data.length) {
+    if (answerText.slice(0, 12) == "The Mystery " || index > countryData.length) {
         clearInterval(interval);
     }
 

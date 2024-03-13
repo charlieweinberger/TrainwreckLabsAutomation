@@ -1,3 +1,5 @@
+// An automated javascript console solver for Globle: Capitals.
+
 const capitals = ["Abu Dhabi", "Abuja", "Accra", "Addis Ababa", "Algiers", "Amman", "Amsterdam",
 "Andorra la Vella", "Ankara", "Antananarivo", "Apia", "Ashgabat", "Asmara", "Astana", "Asunción",
 "Athens", "Baghdad", "Baku", "Bamako", "Bandar Seri Begawan", "Bangkok", "Bangui", "Banjul",
@@ -35,6 +37,9 @@ let index = 0;
 let delay = 500; // CHANGE THIS
 
 let interval = setInterval(() => {
+
+    console.log(`\nindex: ${index}`);
+    console.log(`capital: ${capitals[index]}`);
 
     // guess capitals
     document.getElementsByClassName(formInputClassName)[0].value = capitals[index];
