@@ -1,4 +1,5 @@
-// An automated javascript console solver for both Globle and Globle: Capitals.
+/* Lists all countries and capitals in Globle and Globle: Capitals, respectively. */
+/* Note: Jerusalem is the listed capital of both Israel and Palestine. */
 
 const countryData = [
     {"country": "Afghanistan", "capital": "Kabul"},
@@ -199,34 +200,3 @@ const countryData = [
     {"country": "Zambia", "capital": "Lusaka"},
     {"country": "Zimbabwe", "capital": "Harare"}
 ];
-
-const formInputClassName = `shadow px-2 py-1 md:py-0 w-full border rounded text-gray-700
-                            dark:bg-slate-200 dark:text-gray-900 focus:outline-none
-                            focus:shadow-outline disabled:bg-slate-400 disabled:border-slate-400`;
-const formSubmitClassName = `bg-blue-700 dark:bg-purple-800 hover:bg-blue-900 dark:hover:bg-purple-900 
-                             dark:disabled:bg-purple-900 disabled:bg-blue-900 text-white font-bold
-                             py-1 md:py-2 px-4 rounded focus:shadow-outline`;
-const answerTextClassName = "text-center font-medium";
-
-let index = 0;
-
-let type = "country";
-let delay = 500; // CHANGE THIS: I recommended 100 or 500 milliseconds
-
-let interval = setInterval(() => {
-
-    console.log(`\nindex: ${index}`);
-    console.log(`data: ${countryData[index][type]}`);
-
-    // guess option
-    document.getElementsByClassName(formInputClassName)[0].value = countryData[index][type];
-    document.getElementsByClassName(formSubmitClassName)[0].click();
-    index++;
-
-    // check if answer is found or all options have been guessed
-    answerText = document.getElementsByClassName(answerTextClassName)[0].innerHTML;
-    if (answerText.slice(0, 12) == "The Mystery " || index > countryData.length) {
-        clearInterval(interval);
-    }
-
-}, delay);
