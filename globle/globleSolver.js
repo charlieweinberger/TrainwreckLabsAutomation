@@ -26,4 +26,4 @@ let interval = setInterval(() => {
         clearInterval(interval);
     }
 
-}, delay);
+}, /* CHANGE THIS --> */ 500 /* <-- CHANGE THIS */);
