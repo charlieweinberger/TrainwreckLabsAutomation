@@ -22,7 +22,7 @@ let interval = setInterval(() => {
     index++;
 
     // check if answer is found or all countries have been guessed
-    if (answerTextElement.innerHTML.slice(0, 23) == "The Mystery Country is " || index > countries.length) {
+    if (answerTextElement.innerHTML.slice(0, 22) == "The Mystery Country is" || index > countries.length) {
         clearInterval(interval);
     }
 
